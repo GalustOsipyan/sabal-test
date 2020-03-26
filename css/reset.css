@@ -1,0 +1,87 @@
+h1, h2, h3, h4, h5, h6,
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button, input {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+button:focus, input:focus {
+  outline: none !important;
+}
+
+input {
+  font-family: Roboto, sans-serif;
+}
+
+.btn {
+  width: 316px;
+  height: 100px;
+  border-radius: 0;
+  border: 3px solid #fff !important;
+  font-size: 32px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+.btn:hover {
+  border: 3px solid #fff !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn:active {
+  background: rgba(255, 255, 255, 0.3);
+  border: #fff;
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: none !important;
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  box-shadow: none !important;
+}
+
+.btn .btn-primary {
+  background: rgba(255, 255, 255, 0);
+}
+
+.btn .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn .btn-primary:active {
+  outline: none !important;
+  background: rgba(255, 255, 255, 0);
+  border: #fff;
+}
+
+.btn .btn-primary:focus {
+  outline: none !important;
+  background: rgba(255, 255, 255, 0);
+  border: #fff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: none;
+}

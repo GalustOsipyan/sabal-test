@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Sabal - home</title>
+</head>
+<body>
+<!--The main Navigation bar, buttons for opening modals are set only here-->
+<nav class="NavBar d-flex align-items-center">
+  <div class="Container NavBar__content d-flex justify-content-between align-items-center">
+    <div class="NavBar__products">
+      <a aria-current="page" class="active" href="/">new</a>
+      <a href="/">BAGS</a><a href="/">SHOES</a>
+      <a href="/">READY TO WEAR</a>
+      <button class="" type="button" data-toggle="modal" data-target="#shippingModal">
+        Ship To
+        <img src="assets/images/flag-usa.png" alt="">
+      </button>
+    </div>
+    <a aria-current="page" class="active" href="/">
+      <img class="NavBar__logo" src="assets/icons/sabal-logo.png" alt="">
+    </a>
+
+    <div class="NavBar__functions d-flex justify-content-end">
+      <button class="NavBar__button d-flex flex-column-reverse justify-content-between align-items-center"
+              type="button">search<img src="assets/icons/search.png" alt=""></button>
+      <button class="NavBar__button d-flex flex-column-reverse justify-content-between align-items-center"
+              data-toggle="modal" data-target="#registrationModal"
+              type="button">
+        login
+        <img src="assets/icons/sign-in.png" alt="">
+      </button>
+      <button class="NavBar__button d-flex flex-column-reverse justify-content-between align-items-center"
+              type="button">wishlist
+        <span>1</span>
+        <img src="assets/icons/wishlist.png" alt="">
+      </button>
+      <button class="NavBar__button d-flex flex-column-reverse justify-content-between align-items-center"
+              type="button">shopping bag
+        <span>1</span>
+        <img src="assets/icons/shopping-bag.png" alt="">
+      </button>
+    </div>
+  </div>
+</nav>
+<!--The main Navigation bar, buttons for opening modals are set only here/-->
+
+
+<!--SHIPPING MODAL-->
+<div class="modal fade customized-modal shipping-modal" id="shippingModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <img src="assets/icons/close-modal.png" alt="">
+      </button>
+
+      <div class="modal-body d-flex flex-column">
+        <h5 class="customized-modal__header text-center text-uppercase">now shipping
+          worldwide!</h5>
+
+
+        <!--COUNTRY SELECT-->
+        <div class="input-group custom-select-wrap select-shipping-wrap d-flex justify-content-center">
+
+          <label for="inputGroupSelect01" class="select-shipping-label mb-0">
+            change your shipping country
+            <img src="assets/icons/shopping-bag.png" alt="" class="country-select-shopping-bag">
+            <select class="custom-select country-select" id="inputGroupSelect02">
+              <option selected>United States</option>
+              <option value="2">Russia</option>
+              <option value="3">Italy</option>
+            </select>
+            <img src="assets/icons/select-shipping-carrot.png" alt="" class="select-shipping-carrot">
+          </label>
+        </div>
+        <!--COUNTRY SELECT/-->
+
+        <!--CURRENCY SELECT-->
+        <div class="input-group custom-select-wrap select-currency-wrap d-flex justify-content-center">
+
+          <label for="inputGroupSelect01" class="select-shipping-label mb-0">
+            change currency
+            <select class="custom-select currency-select" id="inputGroupSelect03">
+              <option selected>US Dollar</option>
+              <option value="1">EU</option>
+              <option value="2">RUB</option>
+            </select>
+            <img src="assets/icons/select-shipping-carrot.png" alt="" class="select-shipping-carrot">
+          </label>
+        </div>
+        <!--CURRENCY SELECT/-->
+
+        <button type="button" class="product-btn product-btn-dark save-btn">Save</button>
+        <button type="button" class="product-btn product-btn-light cancel-btn" data-dismiss="modal">
+          Cancel
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--SHIPPING MODAL/-->
+
+
+<!--LOGIN REGISTRATION MODAL-->
+<div class="modal fade customized-modal registration-modal" id="registrationModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <img src="assets/icons/close-modal.png" alt="">
+      </button>
+
+
+      <div class="modal-body d-flex flex-column">
+
+        <ul class="registration-nav nav nav-tabs d-flex justify-content-around" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#login" role="tab"
+               aria-selected="true">login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" id="profile-tab" data-toggle="tab" href="#registration" role="tab"
+               aria-selected="false">Registration</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
+
+            <!--LOGIN FORM-->
+            <form class="registration-form d-flex flex-column">
+
+              <label class="d-flex flex-column">Username
+                <input type="text" class="username registration-input mt-2" name="username">
+              </label>
+
+              <label class="d-flex flex-column">Password
+                <input type="password" class="registration-input mt-2" id="login-password" name="username">
+                <img src="assets/icons/eye-closed.png" alt="" class="eye-icon" id="eye-icon-login">
+              </label>
+
+              <label for="rememberMe" class="checkbox-container">
+                <span class="checkbox-text">Save me</span>
+                <input type="checkbox" id="rememberMe" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+
+              <button type="submit" class="product-btn product-btn-dark login-register-btn text-capitalize">
+                Log In
+              </button>
+
+            </form>
+            <!--LOGIN FORM/-->
+            <a href="/" class="forgot-password-link text-center">Forgotten your password?</a>
+          </div>
+          <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="profile-tab">
+
+            <!--Registration FORM-->
+            <form class="registration-form d-flex flex-column">
+
+              <label class="d-flex flex-column">Username
+                <input type="text" class="username registration-input mt-2" name="username">
+              </label>
+
+              <label class="d-flex flex-column">Password
+                <input type="password" class="registration-input mt-2" id="registration-password" name="username">
+                <img src="assets/icons/eye-closed.png" alt="" class="eye-icon" id="eye-icon-registration">
+              </label>
+
+              <button type="submit" class="product-btn product-btn-dark login-register-btn text-capitalize mt-5">
+                Register
+              </button>
+
+            </form>
+            <!--Registration FORM/-->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--LOGIN REGISTRATION MODAL/-->
+
+<!--Header-->
+<header class="Header container-fluid">
+  <h1 class="Header__heading text-uppercase text-center">shared moments</h1>
+  <a class="btn btn-primary text-uppercase d-flex align-items-center justify-content-center" href="shop.html">shop
+    now</a>
+</header>
+<!--Header/-->
+
+<!--Main content-->
+<main class="StoreSections container-fluid">
+  <div class="Container d-flex flex-wrap justify-content-between">
+    <!--store section block-->
+    <div class="StoreSectionsBlock ">
+      <div class="StoreSectionsBlock__content d-flex flex-column justify-content-between"><h2 class="text-center">
+        dresses</h2><a class="btn btn-primary text-uppercase d-flex align-items-center justify-content-center"
+                       href="shop.html">shop now</a></div>
+    </div>
+    <!--store section block/-->
+    <div class="StoreSectionsBlock ">
+      <div class="StoreSectionsBlock__content d-flex flex-column justify-content-between"><h2 class="text-center">sport
+        &amp; jackets</h2>
+        <a class="btn btn-primary text-uppercase d-flex align-items-center justify-content-center"
+           href="shop.html">shop now</a></div>
+    </div>
+    <div class="StoreSectionsBlock ">
+      <div class="StoreSectionsBlock__content d-flex flex-column justify-content-between"><h2 class="text-center">
+        shoes</h2><a class="btn btn-primary text-uppercase d-flex align-items-center justify-content-center"
+                     href="shop.html">shop now</a></div>
+    </div>
+    <div class="StoreSectionsBlock ">
+      <div class="StoreSectionsBlock__content d-flex flex-column justify-content-between"><h2 class="text-center">
+        bags</h2><a class="btn btn-primary text-uppercase d-flex align-items-center justify-content-center"
+                    href="shop.html">shop now</a></div>
+    </div>
+  </div>
+</main>
+<!--Main content/-->
+
+<!--Carousel-->
+<div class="Container carousel-wrap">
+  <div class="d-flex justify-content-center" style="padding-top: 80px;">
+    <h3 class="mr-5">top products</h3>
+    <h3>new collection 2020</h3>
+  </div>
+
+  <div class="owl-carousel owl-theme">
+
+    <div class="carousel-item-custom d-flex flex-column">
+      <div class="carousel-item-top d-flex align-items-center">
+        <img class="pijama" src="assets/images/CarouselClothesPhotos/pijama.png" alt="pijama">
+      </div>
+      <div class="carousel-item-bottom">
+        <div class="carousel-item-description">
+          <div class="name-price d-flex justify-content-between mt-4">
+            <span>Cloud Dyed Army Jacket</span><span>$329.99</span></div>
+          <div class="color-wishlist d-flex justify-content-between mt-1"><span>Black</span>
+            <button class="" type="button"><img class="" src="assets/icons/wishlist-empty.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item-custom d-flex flex-column">
+      <div class="carousel-item-top d-flex align-items-center">
+        <img class="pijama" src="assets/images/CarouselClothesPhotos/coat.png" alt="pijama">
+      </div>
+      <div class="carousel-item-bottom">
+        <div class="carousel-item-description">
+          <div class="name-price d-flex justify-content-between mt-4">
+            <span>Cloud Dyed Army Jacket</span><span>$329.99</span></div>
+          <div class="color-wishlist d-flex justify-content-between mt-1"><span>Black</span>
+            <button class="" type="button"><img class="" src="assets/icons/wishlist-empty.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item-custom d-flex flex-column">
+      <div class="carousel-item-top d-flex align-items-center">
+        <img class="pijama" src="assets/images/CarouselClothesPhotos/pij-2.png" alt="pijama">
+      </div>
+      <div class="carousel-item-bottom">
+        <div class="carousel-item-description">
+          <div class="name-price d-flex justify-content-between mt-4">
+            <span>Cloud Dyed Army Jacket</span><span>$329.99</span></div>
+          <div class="color-wishlist d-flex justify-content-between mt-1"><span>Black</span>
+            <button class="" type="button"><img class="" src="assets/icons/wishlist-empty.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item-custom d-flex flex-column">
+      <div class="carousel-item-top d-flex align-items-center">
+        <img class="pijama" src="assets/images/CarouselClothesPhotos/coat-2.png" alt="pijama">
+      </div>
+      <div class="carousel-item-bottom">
+        <div class="carousel-item-description">
+          <div class="name-price d-flex justify-content-between mt-4">
+            <span>Cloud Dyed Army Jacket</span><span>$329.99</span></div>
+          <div class="color-wishlist d-flex justify-content-between mt-1"><span>Black</span>
+            <button class="" type="button"><img class="" src="assets/icons/wishlist-empty.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Carousel/-->
+
+
+<!--Footer-->
+<footer class="Footer d-flex flex-column align-items-center">
+  <nav class="Footer__navigation d-flex justify-content-between"><a aria-current="page" class="active" href="/">Help</a><a
+      aria-current="page" class="active" href="/">Contact</a><a aria-current="page" class="active" href="/">Register</a><a
+      aria-current="page" class="active" href="/">Payment</a><a aria-current="page" class="active" href="/">Shops</a><a
+      aria-current="page" class="active" href="/">Company</a><a aria-current="page" class="active" href="/">Work for
+    SABAL</a></nav>
+
+
+  <!--LANGUAGE SELECT-->
+  <div class="input-group custom-select-wrap select-language-wrap d-flex justify-content-center">
+
+    <label for="inputGroupSelect01" class="language-select-label mb-0">
+      <img src="assets/icons/globe.png" alt="" class="language-select-globe">
+      <select class="custom-select language-select" id="inputGroupSelect01">
+        <option selected>English</option>
+        <option value="1">Turkish</option>
+        <option value="2">Russian</option>
+        <option value="3">Italian</option>
+      </select>
+      <img src="assets/icons/language-select-carrot.png" alt="" class="language-select-carrot">
+    </label>
+  </div>
+  <!--LANGUAGE SELECT/-->
+
+  <h3 class="Footer__heading">Subscribe now and get 10% off new collection garments</h3>
+  <form class="Footer__form d-flex justify-content-between">
+    <label>
+      <input type="text" placeholder="Enter your e-mail" class="Footer__input">
+    </label>
+    <button class="mail-subscribe-btn" type="submit">
+      <img src="assets/icons/send.png" alt="">
+    </button>
+  </form>
+  <div class="Footer__social-links d-flex justify-content-between"><a href="/" class="Footer__social-link">
+    <img src="assets/icons/facebook.png" alt="facebook"></a>
+    <a href="/" class="Footer__social-link">
+      <img src="assets/icons/twitter.png" alt="twitter">
+    </a>
+    <a href="/" class="Footer__social-link">
+      <img src="assets/icons/youtube.png" alt="youTube">
+    </a>
+    <a href="/" class="Footer__social-link">
+      <img src="assets/icons/rss.png" alt="rss">
+    </a>
+  </div>
+
+  <p class="Footer__copyright">© 2020 SABAL All rights reserved Privacy Policy</p>
+
+</footer>
+<!--Footer/-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+  font-family: "Savoy-Regular";
+  src: url(../assets/fonts/Savoy_Regular.ttf);
+}
+
+@font-face {
+  font-family: "Savoy-Bold";
+  src: url(../assets/fonts/Savoy_Bold.ttf);
+}
